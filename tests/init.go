@@ -25,27 +25,27 @@ import (
 
 // This table defines supported forks and their chain config.
 var Forks = map[string]*params.ChainConfig{
-	"Frontier": &params.ChainConfig{
-		ChainId: big.NewInt(99),
+	"Frontier": {
+		ChainId: big.NewInt(1),
 	},
-	"Homestead": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"Homestead": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 	},
-	"EIP150": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"EIP150": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
 	},
-	"EIP158": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"EIP158": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
 		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 	},
-	"Byzantium": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"Byzantium": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
 		EIP155Block:    big.NewInt(0),
@@ -53,23 +53,23 @@ var Forks = map[string]*params.ChainConfig{
 		DAOForkBlock:   big.NewInt(0),
 		ByzantiumBlock: big.NewInt(0),
 	},
-	"FrontierToHomesteadAt5": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"FrontierToHomesteadAt5": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(5),
 	},
-	"HomesteadToEIP150At5": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"HomesteadToEIP150At5": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(5),
 	},
-	"HomesteadToDaoAt5": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"HomesteadToDaoAt5": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		DAOForkBlock:   big.NewInt(5),
 		DAOForkSupport: true,
 	},
-	"EIP158ToByzantiumAt5": &params.ChainConfig{
-		ChainId:        big.NewInt(99),
+	"EIP158ToByzantiumAt5": {
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
 		EIP155Block:    big.NewInt(0),
