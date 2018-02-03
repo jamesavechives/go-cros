@@ -1113,7 +1113,8 @@ type SendTxArgs struct {
 func (args *SendTxArgs) setDefaults(ctx context.Context, b Backend) error {
 	if args.Gas == nil {
 		args.Gas = new(hexutil.Uint64)
-		*(*uint64)(args.Gas) = 90000
+		//*(*uint64)(args.Gas) = 90000
+		*(*uint64)(args.Gas) = 0
 	}
 	if args.GasPrice == nil {
 		price, err := b.SuggestPrice(ctx)
