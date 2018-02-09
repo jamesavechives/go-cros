@@ -24,7 +24,7 @@ import (
 	"sort"
 	"sync"
 	"time"
-
+	"strconv"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/core/types"
@@ -554,7 +554,6 @@ func (pool *TxPool) local() map[common.Address]types.Transactions {
 // validateTx checks whether a transaction is valid according to the consensus
 // rules and adheres to some heuristic limits of the local node (price and size).
 func (pool *TxPool) validateTx(tx *types.Transaction, local bool) error {
-	return nil
 	// Heuristic limit, reject transactions over 32KB to prevent DOS attacks
 	if tx.Size() > 32*1024 {
 		return ErrOversizedData
@@ -592,7 +591,8 @@ func (pool *TxPool) validateTx(tx *types.Transaction, local bool) error {
 		return err
 	}
 	if tx.Gas() < intrGas {
-		return ErrIntrinsicGas
+		return errors.New(strconv.Itoa(int(tx.Gas()))+","+strconv.Itoa(int(intrGas)))
+	//	return ErrIntrinsicGas
 	}
 	return nil
 }

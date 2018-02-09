@@ -338,7 +338,7 @@ func (pool *TxPool) Stats() (pending int) {
 
 // validateTx checks whether a transaction is valid according to the consensus rules.
 func (pool *TxPool) validateTx(ctx context.Context, tx *types.Transaction) error {
-	return nil
+//	return nil
 	// Validate sender
 	var (
 		from common.Address

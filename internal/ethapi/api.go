@@ -685,7 +685,7 @@ func (s *PublicBlockChainAPI) Call(ctx context.Context, args CallArgs, blockNr r
 func (s *PublicBlockChainAPI) EstimateGas(ctx context.Context, args CallArgs) (hexutil.Uint64, error) {
 	// Binary search the gas requirement, as it may be higher than the amount used
 	var (
-		lo  uint64 = params.TxGas - 1
+		lo  uint64 = params.TxGas 
 		hi  uint64
 		cap uint64
 	)
@@ -1113,7 +1113,7 @@ type SendTxArgs struct {
 func (args *SendTxArgs) setDefaults(ctx context.Context, b Backend) error {
 	if args.Gas == nil {
 		args.Gas = new(hexutil.Uint64)
-		//*(*uint64)(args.Gas) = 90000
+	//	*(*uint64)(args.Gas) = 90000
 		*(*uint64)(args.Gas) = 0
 	}
 	if args.GasPrice == nil {

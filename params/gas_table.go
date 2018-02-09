@@ -37,39 +37,73 @@ type GasTable struct {
 var (
 	// GasTableHomestead contain the gas prices for
 	// the homestead phase.
+	// GasTableHomestead = GasTable{
+	// 	ExtcodeSize: 20,
+	// 	ExtcodeCopy: 20,
+	// 	Balance:     20,
+	// 	SLoad:       50,
+	// 	Calls:       40,
+	// 	Suicide:     0,
+	// 	ExpByte:     10,
+	// }
+
 	GasTableHomestead = GasTable{
-		ExtcodeSize: 20,
-		ExtcodeCopy: 20,
-		Balance:     20,
-		SLoad:       50,
-		Calls:       40,
+		ExtcodeSize: 0,
+		ExtcodeCopy: 0,
+		Balance:     0,
+		SLoad:       0,
+		Calls:       0,
 		Suicide:     0,
-		ExpByte:     10,
+		ExpByte:     0,
 	}
 
 	// GasTableHomestead contain the gas re-prices for
 	// the homestead phase.
-	GasTableEIP150 = GasTable{
-		ExtcodeSize: 700,
-		ExtcodeCopy: 700,
-		Balance:     400,
-		SLoad:       200,
-		Calls:       700,
-		Suicide:     5000,
-		ExpByte:     10,
+	// GasTableEIP150 = GasTable{
+	// 	ExtcodeSize: 700,
+	// 	ExtcodeCopy: 700,
+	// 	Balance:     400,
+	// 	SLoad:       200,
+	// 	Calls:       700,
+	// 	Suicide:     5000,
+	// 	ExpByte:     10,
 
-		CreateBySuicide: 25000,
+	// 	CreateBySuicide: 25000,
+	// }
+
+	GasTableEIP150 = GasTable{
+		ExtcodeSize: 0,
+		ExtcodeCopy: 0,
+		Balance:     0,
+		SLoad:       0,
+		Calls:       0,
+		Suicide:     0,
+		ExpByte:     0,
+
+		CreateBySuicide: 0,
 	}
 
-	GasTableEIP158 = GasTable{
-		ExtcodeSize: 700,
-		ExtcodeCopy: 700,
-		Balance:     400,
-		SLoad:       200,
-		Calls:       700,
-		Suicide:     5000,
-		ExpByte:     50,
+	// GasTableEIP158 = GasTable{
+	// 	ExtcodeSize: 700,
+	// 	ExtcodeCopy: 700,
+	// 	Balance:     400,
+	// 	SLoad:       200,
+	// 	Calls:       700,
+	// 	Suicide:     5000,
+	// 	ExpByte:     50,
 
-		CreateBySuicide: 25000,
+	// 	CreateBySuicide: 25000,
+	// }
+
+	GasTableEIP158 = GasTable{
+		ExtcodeSize: 0,
+		ExtcodeCopy: 0,
+		Balance:     0,
+		SLoad:       0,
+		Calls:       0,
+		Suicide:     0,
+		ExpByte:     0,
+
+		CreateBySuicide: 0,
 	}
 )
